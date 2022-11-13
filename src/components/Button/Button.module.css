@@ -1,0 +1,81 @@
+.button {
+	background-image: none;
+	background-color: var(--primary-text-color);
+	color: var(--primary-bg-color);
+	border: none;
+	border-radius: 0.8rem;
+	box-shadow: 4px 4px 0 0 var(--primary-bg-color),
+		4px 4px 0 1px var(--primary-text-color);
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	margin: 0 1rem 1.2rem 0;
+	overflow: visible;
+
+	text-align: center;
+	text-transform: none;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.button:focus,
+.button:hover {
+	text-decoration: none;
+}
+
+.button.disabled,
+.button:disabled {
+	background-color: var(--light-gray);
+	color: var(--dark-teal-color);
+	border: 0.1rem solid var(--dark-teal-color);
+	box-shadow: 2px 2px 0 0 var(--dark-teal-color),
+		2px 2px 0 1px var(--primary-bg-color);
+	transform: translate(2px, 2px);
+	cursor: no-drop;
+}
+
+.button:not([disabled], .button.disabled):active {
+	box-shadow: 2px 2px 0 0 var(--primary-bg-color),
+		2px 2px 0 1px var(--primary-text-color);
+	transform: translate(2px, 2px);
+}
+
+.button-lg {
+	padding: 1.2rem 5rem;
+}
+
+.button,
+.button-md {
+	padding: 1rem 4rem;
+}
+
+.button-sm {
+	padding: 0.8rem 2rem;
+}
+
+.inverted {
+	background-color: var(--primary-bg-color);
+	color: var(--primary-text-color);
+	border: 0.1rem solid var(--primary-text-color);
+}
+
+@media (min-width: 768px) {
+	.button-lg {
+		padding: 1.2rem 5rem;
+	}
+
+	.button-md {
+		padding: 1rem 4rem;
+	}
+
+	.button-sm {
+		padding: 1rem 2.8rem;
+	}
+}

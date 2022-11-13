@@ -1,0 +1,14 @@
+.greeting {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.8rem;
+}
+
+.greeting .hello {
+	letter-spacing: 0.2rem;
+	font-family: cursive;
+}
+
+.greeting .greetMessage {
+	font-size: 2.4rem;
+}

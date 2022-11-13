@@ -1,0 +1,50 @@
+.inputbox {
+	position: relative;
+	/* max-width: 25rem; */
+	margin: 2rem 0;
+}
+
+.inputbox > input.floating-input {
+	width: 100%;
+	border: 1px solid var(--dark-teal-color);
+	border-radius: 0.8rem;
+	font-size: 1.6rem;
+	color: var(--primary-text-color);
+	outline: none;
+
+	padding: 1rem;
+	background: none;
+	transition: all 0.2s;
+}
+
+.inputbox > label.floating-label {
+	position: absolute;
+	left: 0;
+	padding: 1rem;
+	color: var(--dark-gray-color);
+	cursor: text;
+	font-size: 1.6rem;
+	transition: all 0.2s ;
+	pointer-events: none;
+}
+
+.inputbox
+	> input.floating-input:not(:placeholder-shown).floating-input:not(:focus)
+	~ label.floating-label,
+.inputbox > input.floating-input:focus ~ label.floating-label {
+	text-transform: uppercase;
+	color: var(--primary-text-color);
+	transform: translate(2rem, -1rem);
+	font-size: 1.2rem;
+	padding: 0.2rem 0.8rem;
+	background-color: var(--primary-text-color);
+	color: var(--primary-bg-color);
+	letter-spacing: 0.1rem;
+	border-radius: 0.4rem;
+}
+
+.inputbox
+	> input.floating-input:not(:placeholder-shown).floating-input:not(:focus),
+.inputbox > input.floating-input:focus {
+	border: 1px solid var(--primary-text-color);
+}

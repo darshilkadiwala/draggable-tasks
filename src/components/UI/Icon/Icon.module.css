@@ -1,0 +1,4 @@
+i.bx::before,
+i.bx::after {
+	font-family: unset !important;
+}

@@ -1,0 +1,29 @@
+li.list-item {
+	font-size: 1.4rem;
+	position: relative;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	left: -2.2rem;
+}
+
+.list-item i {
+	font-size: 2rem;
+	visibility: hidden;
+	transition: all 0.1s ease;
+}
+
+.list-item:hover i {
+	visibility: visible;
+}
+
+.list-item:hover i:hover {
+	cursor: grab;
+}
+
+.list-item:hover i:hover:active {
+	cursor: grabbing;
+}
+
+.task-title {
+}

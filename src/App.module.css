@@ -1,0 +1,11 @@
+.app {
+	
+	margin: 2rem;
+	min-height: calc(100vh / 2) !important;
+	height: calc(100vh - 4rem);
+	display: flex;
+	flex-direction: row;
+	background-color: var(--primary-bg-color);
+	border-radius: 0.8rem;
+	box-shadow: var(--dark-shadow);
+}

@@ -1,0 +1,7 @@
+.nav {
+	max-width: 25rem;
+	flex-direction: column;
+}
+.link-container {
+	padding-top: 2.5rem;
+}

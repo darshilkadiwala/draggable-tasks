@@ -1,0 +1,21 @@
+.task-container {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	min-height: calc(100% - 11rem);
+}
+
+.header {
+	font-size: 3rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.header i {
+	font-size: 3.5rem;
+}
+
+.header span {
+	margin-left: 2rem;
+}

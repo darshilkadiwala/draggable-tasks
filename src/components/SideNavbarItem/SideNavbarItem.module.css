@@ -1,0 +1,41 @@
+.link-item {
+	list-style: none;
+	padding: 0.4rem;
+}
+
+.link-item a {
+	font-size: 1.8rem;
+	
+	padding: 1rem;
+	display: flex;
+	border-radius: 0.8rem;
+	justify-content: flex-start;
+	align-items: center;
+	
+	transition: all 0.3s;
+	font-weight: 700;
+}
+
+.link-item a:link {
+	color: var(--primary-text-color);
+}
+
+.link-item .active,
+.link-item a:active,
+.link-item a:hover {
+	background-color: var(--primary-text-color);
+	color: var(--off-white);
+}
+.link-item a:hover {
+	transition: all 0.5s;
+}
+
+.link-item > a > i {
+	font-size: 2.2rem;
+	stroke-width: 1rem;
+}
+
+.link-item > a > span {
+	margin-left: 1.6rem;
+	font-family: "Courier New", Courier, monospace;
+}
