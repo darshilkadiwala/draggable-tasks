@@ -5,6 +5,7 @@ li.list-item {
 	gap: 0.5rem;
 	align-items: center;
 	left: -2.2rem;
+	background-color: transparent;
 }
 
 .list-item i {

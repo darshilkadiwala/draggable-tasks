@@ -4,16 +4,23 @@ import Card from "../../../components/UI/Card/Card";
 import Icon from "../../../components/UI/Icon/Icon";
 
 const TaskListItem = (props) => {
+	const dragStarted = (e, id) => {
+		console.log(e);
+		e.dataTransfer.setData("taskId", id);
+	};
+
 	return (
-		<li className={cssClasses["list-item"]}>
+		<li
+			className={cssClasses["list-item"]}
+			draggable
+			onDragStart={(e) => {
+				dragStarted(e, props.taskId);
+			}}
+		>
 			<Icon icon='grid-vertical' />
 			<Card cardColor={props.cardColor}>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt
-					quae esse eum facilis voluptatibus, alias ad maiores. Sed quam,
-					molestias earum repellat delectus enim reprehenderit necessitatibus
-					distinctio voluptas. Rerum?
-				</p>
+				<p>Lorem ipsum dolor sit amet {props.taskId}</p>
+				{/* <p>{props.taskTitle}</p> */}
 			</Card>
 		</li>
 	);
