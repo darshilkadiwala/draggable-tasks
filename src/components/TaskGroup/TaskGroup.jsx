@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../UI/Card/Card";
-import TaskList from "../TaskList/TaskList";
+import TaskList from "../../TaskList/TaskList";
 import cssClasses from "./TaskGroup.module.css";
 
 const TaskGroup = (props) => {
@@ -11,15 +11,9 @@ const TaskGroup = (props) => {
 					shadow='light'
 					cardColor={props.cardColor}
 				>
-					<h1 className={cssClasses["group-header"]}>
-						{props.taskGroup.title}
-					</h1>
+					<h1 className={cssClasses["group-header"]}>To-do</h1>
 				</Card>
-				<TaskList
-					cardColor={props.cardColor}
-					droppableId={props.droppableId}
-					tasks={props.taskGroup.tasks}
-				/>
+				<TaskList cardColor={props.cardColor} />
 			</div>
 		</Card>
 	);

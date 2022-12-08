@@ -1,28 +1,45 @@
-import cssClasses from "./TaskListItem.module.css";
 import React from "react";
+import { Draggable } from "react-beautiful-dnd";
 import Card from "../../../components/UI/Card/Card";
 import Icon from "../../../components/UI/Icon/Icon";
+import cssClasses from "./TaskListItem.module.css";
 
 const TaskListItem = (props) => {
-	const dragStarted = (e, id) => {
-		console.log(e);
-		e.dataTransfer.setData("taskId", id);
-	};
+	// const dragStarted = (e, id) => {
+	// 	console.log(e);
+	// 	e.dataTransfer.setData("taskId", id);
+	// };
 
 	return (
-		<li
-			className={cssClasses["list-item"]}
-			draggable
-			onDragStart={(e) => {
-				dragStarted(e, props.taskId);
-			}}
+		<Draggable
+			index={props.index}
+			draggableId={props.task.id}
 		>
-			<Icon icon='grid-vertical' />
-			<Card cardColor={props.cardColor}>
-				<p>Lorem ipsum dolor sit amet {props.taskId}</p>
-				{/* <p>{props.taskTitle}</p> */}
-			</Card>
-		</li>
+			{(provided, snapshot) => {
+				return (
+					<li
+						className={cssClasses["list-item"]}
+						ref={provided.innerRef}
+						{...provided.draggableProps}
+						{...provided.dragHandleProps}
+						// draggable
+						// onDragStart={(e) => {
+						// 	dragStarted(e, props.taskId);
+						// }}
+					>
+						<Icon icon='grid-vertical' />
+						<Card
+							cardColor={`${props.cardColor} ${
+								snapshot.isDragging && "dragging"
+							}`}
+						>
+							<p>Lorem ipsum dolor sit amet {props.task.id}</p>
+							{/* <p>{props.taskTitle}</p> */}
+						</Card>
+					</li>
+				);
+			}}
+		</Draggable>
 	);
 };
 

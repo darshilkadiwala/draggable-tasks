@@ -7,12 +7,11 @@ import useForm from "../../hooks/useForm";
 // import cssClasses from "./AddTask.module.css";
 
 const AddTask = () => {
+	const [formState, handleChange] = useForm({});
 	const onFormSubmitHandler = (event) => {
 		event.preventDefault();
 		console.log(formState);
 	};
-
-	const [formState, handleChange] = useForm({});
 
 	return (
 		<Form onSubmit={onFormSubmitHandler}>

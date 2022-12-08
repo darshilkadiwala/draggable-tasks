@@ -3,7 +3,7 @@
 	padding: 1rem;
 }
 
-.dark-card {
+.dark-card,.dragging-card {
 	background-color: var(--primary-text-color);
 	color: var(--primary-bg-color);
 }

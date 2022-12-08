@@ -27,7 +27,7 @@ function App() {
 					/>
 				</Routes>
 			</main>
-			<div className='container'></div>
+			{/* <div className='container'></div> */}
 		</div>
 	);
 }
