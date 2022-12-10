@@ -26,6 +26,7 @@ const TaskListItem = (props) => {
 						// onDragStart={(e) => {
 						// 	dragStarted(e, props.taskId);
 						// }}
+						// style={{backgroundColor:'blue'}}
 					>
 						<Icon icon='grid-vertical' />
 						<Card
@@ -33,7 +34,9 @@ const TaskListItem = (props) => {
 								snapshot.isDragging && "dragging"
 							}`}
 						>
-							<p>Lorem ipsum dolor sit amet {props.task.id}</p>
+							<p className={cssClasses["task-title"]}>
+								{props.task.taskTitle}
+							</p>
 							{/* <p>{props.taskTitle}</p> */}
 						</Card>
 					</li>

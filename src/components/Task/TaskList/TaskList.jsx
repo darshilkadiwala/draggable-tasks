@@ -14,9 +14,9 @@ const TaskList = (props) => {
 	// };
 	return (
 		<Droppable droppableId={props.droppableId}>
-			{(provided) => (
+			{(provided, snapshot) => (
 				<ul
-					className={cssClasses.list}
+					className={`${cssClasses.list} ${snapshot.isDraggingOver&& cssClasses.dragging}`}
 					{...provided.droppableProps}
 					ref={provided.innerRef}
 					// onDragOver={onDragOver}
@@ -30,6 +30,7 @@ const TaskList = (props) => {
 							index={index}
 						/>
 					))}
+					{}
 					{provided.placeholder}
 				</ul>
 			)}

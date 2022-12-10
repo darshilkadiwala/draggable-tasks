@@ -1,5 +1,5 @@
 .list-item {
-	font-size: 1.4rem;
+	
 	position: relative;
 	display: flex;
 	gap: 0.5rem;
@@ -27,4 +27,5 @@
 }
 
 .task-title {
+	font-size: 1.6rem;
 }

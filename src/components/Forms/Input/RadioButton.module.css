@@ -1,0 +1,48 @@
+.labelBox > label {
+	display: flex;	
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: 500;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0.375rem;
+	/* Accessible outline */
+	/* Remove comment to use */
+}
+.labelBox > label input {
+	position: absolute;
+	left: -9999px;
+	display: none;
+}
+.labelBox > label input:checked + span {
+	/* background-image: linear-gradient(to right bottom, var(--dark-teal-color),  var(--dark-gray-color)); */
+	
+	background-color: var(--light-green-color);
+	font-weight: 700;
+	/* color: var(--primary-bg-color) */
+}
+.labelBox > label input:checked + span:before {
+	box-shadow: inset 0 0 0 0.4em #00005c;
+}
+.labelBox > label span {
+	display: flex;
+	align-items: center;
+	padding: 0.35em 0.75em 0.35em 0.35em;
+	border-radius: 99em;
+	transition: 0.25s ease;
+}
+.labelBox > label span:hover {
+	background-color: #d6d6e5;
+}
+.labelBox > label span:before {
+	display: flex;
+	flex-shrink: 0;
+	content: "";
+	background-color: #fff;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 50%;
+	margin-right: 0.375em;
+	transition: 0.25s ease;
+	box-shadow: inset 0 0 0 0.125em var(--light-green-color);
+}
