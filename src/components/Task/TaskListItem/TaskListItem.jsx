@@ -18,7 +18,9 @@ const TaskListItem = (props) => {
 			{(provided, snapshot) => {
 				return (
 					<li
-						className={cssClasses["list-item"]}
+						className={`${snapshot.isDragging && cssClasses["list-item-dragging"]} ${
+							cssClasses["list-item"]
+						}`}
 						ref={provided.innerRef}
 						{...provided.draggableProps}
 						{...provided.dragHandleProps}
@@ -34,9 +36,7 @@ const TaskListItem = (props) => {
 								snapshot.isDragging && "dragging"
 							}`}
 						>
-							<p className={cssClasses["task-title"]}>
-								{props.task.taskTitle}
-							</p>
+							<p className={cssClasses["task-title"]}>{props.task.taskTitle}</p>
 							{/* <p>{props.taskTitle}</p> */}
 						</Card>
 					</li>

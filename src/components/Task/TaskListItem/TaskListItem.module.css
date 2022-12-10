@@ -1,11 +1,20 @@
 .list-item {
-	
 	position: relative;
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
 	left: -2.2rem;
 	background-color: transparent;
+
+}
+
+/* .list-item:not(:last-child) {
+	border-bottom: 1px solid black;
+} */
+
+.list-item-dragging {
+	background-color: burlywood;
+	border-radius: 1.1rem;
 }
 
 .list-item i {

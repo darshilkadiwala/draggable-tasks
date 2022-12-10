@@ -16,20 +16,28 @@ const TaskList = (props) => {
 		<Droppable droppableId={props.droppableId}>
 			{(provided, snapshot) => (
 				<ul
-					className={`${cssClasses.list} ${snapshot.isDraggingOver&& cssClasses.dragging}`}
+					className={`${cssClasses.list} ${
+						snapshot.isDraggingOver && cssClasses.dragging
+					}`}
 					{...provided.droppableProps}
 					ref={provided.innerRef}
 					// onDragOver={onDragOver}
 					// onDrop={onDragDropped}
 				>
-					{props.tasks.map((task, index) => (
-						<TaskListItem
-							cardColor={props.cardColor}
-							task={task}
-							key={task.id}
-							index={index}
-						/>
-					))}
+					{props.tasks.map((task, index) => {
+						return (
+							<>
+								<TaskListItem
+									cardColor={props.cardColor}
+									task={task}
+									key={task.id}
+									index={index}
+								/>
+								{props.tasks.length !== index + 1 &&
+									!snapshot.isDraggingOver && <hr />}
+							</>
+						);
+					})}
 					{}
 					{provided.placeholder}
 				</ul>
